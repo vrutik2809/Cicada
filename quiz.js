@@ -18,7 +18,7 @@ let noq = localStorage.getItem("NumberOfQuestions");
 let level = localStorage.getItem("Level");
 let questions = [];
 let options = [];
-let ans;
+let ans = [];
 let url = `https://opentdb.com/api.php?amount=${noq}&category=${cat}&difficulty=${level}&type=multiple`;
 fetch(url).then((response)=>{
     return response.json();
@@ -27,9 +27,9 @@ fetch(url).then((response)=>{
     for(let i = 0;i < data.results.length;i++){
         questions.push(data.results[i].question);
         let arr = new Array(data.results[i].correct_answer,data.results[i].incorrect_answers[0],data.results[i].incorrect_answers[1],data.results[i].incorrect_answers[2]);
-        ans = arr[0];
+        ans[i] = arr[0];
         arr.sort(() => Math.random() - 0.5);
-        console.log(arr);
+        // console.log(arr);
         options.push(arr);
     }
     let next = document.getElementById("next");
@@ -65,24 +65,24 @@ fetch(url).then((response)=>{
         let arr = [];
         let index;
         for(let i = 0;i < 4;i++){
-            arr[i] = options[itr-1][i];
-            if(arr[i] == ans){
+            arr.push(options[itr-1][i]);
+            if(arr[i] == ans[itr-1]){
                 index = i;
             }
         }
-        if(index == 0){
+        if(index === 0){
             document.getElementById("Q1_1").style.border = "3px solid green";
             document.getElementById("Q1_2").style.border = "3px solid red";
             document.getElementById("Q1_3").style.border = "3px solid red";
             document.getElementById("Q1_4").style.border = "3px solid red";
         }
-        else if(index == 1){
+        else if(index === 1){
             document.getElementById("Q1_1").style.border = "3px solid red";
             document.getElementById("Q1_2").style.border = "3px solid green";
             document.getElementById("Q1_3").style.border = "3px solid red";
             document.getElementById("Q1_4").style.border = "3px solid red";
         }
-        else if(index == 2){
+        else if(index === 2){
             document.getElementById("Q1_1").style.border = "3px solid red";
             document.getElementById("Q1_2").style.border = "3px solid red";
             document.getElementById("Q1_3").style.border = "3px solid green";

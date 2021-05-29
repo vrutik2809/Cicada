@@ -1,7 +1,7 @@
 //selector
-document.getElementById("paudio").setAttribute("src","background.mp3");
-document.getElementById("paudio").volume = 0.7;
-console.log("ayush khamar");
+document.getElementById("baudio").setAttribute("src","background.mp3");
+document.getElementById("baudio").volume = 0.7;
+console.log("Cicada");
 var number = document.getElementById("numberofquestions");
 var cat = document.getElementById("category");
 var level = document.getElementById("difficulty");

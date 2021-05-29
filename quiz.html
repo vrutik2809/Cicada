@@ -5,37 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
+    <title>QUiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style2.css">
 </head>
 
 <body>
-    <h1>This is the Quiz</h1>
-    <div class="question">
-        <p id="q1">This is Question 1</p>
-        <span class="option">
-            <input type="radio" name="Q1" id="q1_1">
-            <label for="Q1" id = "Q1_1">Option1</label>
-        </span> <br>
-        <span class="option">
-            <input type="radio" name="Q1" id="q1_2">
-            <label for="Q1" id = "Q1_2">Option2</label>
-        </span> <br>
-        <span class="option">
-            <input type="radio" name="Q1" id="q1_3">
-            <label for="Q1" id = "Q1_3">Option3</label>
-        </span> <br>
-        <span class="option">
-            <input type="radio" name="Q1" id="q1_4">
-            <label for="Q1" id = "Q1_4">Option4</label>
-        </span> <br>
-        <span>
-            <button type="submit" id = "next">Next</button>
-        </span>
-        <span>
-            <button type="submit" id = "submit">Confirm</button>
-        </span>
+    <div class="container">
+    <div class="outercontainer">
+            <p class="heading">This is the Quiz</p>
+            <div class="uppercontainer">
+                
+                <div class="question">
+                    
+        
+                        
+                        <p id="q1">This is Question 1</p>
+                    
+                    
+                    <span class="option">
+                        <input type="radio" name="Q1" id="q1_1">
+                        
+                        <label for="Q1" id = "Q1_1">Option1</label>
+                    </span>
+                    <span class="option">
+                        <input type="radio" name="Q1" id="q1_2">
+                        <label for="Q1" id = "Q1_2">Option2</label>
+                    </span>
+                    <span class="option">
+                        <input type="radio" name="Q1" id="q1_3">
+                        <label for="Q1" id = "Q1_3">Option3</label>
+                    </span>
+                    <span class="option">
+                        <input type="radio" name="Q1" id="q1_4">
+                        <label for="Q1" id = "Q1_4">Option4</label>
+                    </span>
+                </div>
+            </div>
+                <div class="lowercontainer">
+
+                    <span class="buttonspan">
+                        <button type="submit" class="btn">Confirm</button>
+                    </span>
+                    <span class="buttonspan">
+                        <button type="submit" class="btn">Next</button>
+                    </span>
+                </div>
+        </div>
     </div>
 
 </body>
 <script src="quiz.js"></script>
+
 </html>

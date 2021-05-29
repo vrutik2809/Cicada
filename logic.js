@@ -1,5 +1,5 @@
 //selector
-console.log("Hii");
+console.log("ayush khamar");
 var number = document.getElementById("numberofquestions");
 var cat = document.getElementById("category");
 var level = document.getElementById("difficulty");
@@ -9,7 +9,7 @@ btn.addEventListener("click",()=>{
     let noq = parseInt(number.value);
     let ctg = cat.value;
     let lvl = level.value;
-    if(noq==undefined||ctg==undefined||lvl==undefined)
+    if(noq=="null"||ctg=="null"||lvl=="null")
     {
         alert('Please select Data');
         document.getElementById('temp').setAttribute('href','#');

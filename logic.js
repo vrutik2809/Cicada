@@ -1,5 +1,5 @@
 //selector
-console.log("Hello");
+console.log("Hii");
 var number = document.getElementById("numberofquestions");
 var cat = document.getElementById("category");
 var level = document.getElementById("difficulty");

@@ -42,10 +42,10 @@ fetch(url).then((response)=>{
     document.getElementById("Q1_4").innerHTML = options[itr][3];
     itr++;
     next.addEventListener("click",()=>{
-        document.getElementById("Q1_1").style.border = "";
-        document.getElementById("Q1_2").style.border = "";
-        document.getElementById("Q1_3").style.border = "";
-        document.getElementById("Q1_4").style.border = "";
+        document.getElementById("option1").style.border = "";
+        document.getElementById("option2").style.border = "";
+        document.getElementById("option3").style.border = "";
+        document.getElementById("option4").style.border = "";
         document.getElementById("q1").innerHTML = questions[itr];
         document.getElementById("Q1_1").innerHTML = options[itr][0];
         document.getElementById("Q1_2").innerHTML = options[itr][1];

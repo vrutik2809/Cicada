@@ -19,6 +19,8 @@ let level = localStorage.getItem("Level");
 let questions = [];
 let options = [];
 let ans = [];
+let link = [];
+let redirect;
 let url = `https://opentdb.com/api.php?amount=${noq}&category=${cat}&difficulty=${level}&type=multiple`;
 fetch(url).then((response)=>{
     return response.json();
@@ -35,11 +37,17 @@ fetch(url).then((response)=>{
     let next = document.getElementById("next");
     let submit = document.getElementById("submit");
     let itr = 0;
+    document.getElementById("src").style.visibility = "hidden";
     document.getElementById("q1").innerHTML = questions[itr];
     document.getElementById("Q1_1").innerHTML = options[itr][0];
     document.getElementById("Q1_2").innerHTML = options[itr][1];
     document.getElementById("Q1_3").innerHTML = options[itr][2];
     document.getElementById("Q1_4").innerHTML = options[itr][3];
+    link.push(questions[itr].split(" ").join("+"));
+    // console.log(link);
+    redirect = `https://www.google.com/search?q=${link[itr]}&rlz=1C1CHBF_enIN924IN924&oq=how+are+you&aqs=chrome..69i57j0l9.3482j0j7&sourceid=chrome&ie=UTF-8`;
+    // console.log(redirect);
+    document.getElementById("src").setAttribute("href",redirect);
     itr++;
     next.addEventListener("click",()=>{
         document.getElementById("option1").style.border = "2px solid white";
@@ -51,6 +59,9 @@ fetch(url).then((response)=>{
         document.getElementById("Q1_2").innerHTML = options[itr][1];
         document.getElementById("Q1_3").innerHTML = options[itr][2];
         document.getElementById("Q1_4").innerHTML = options[itr][3];
+        link.push(questions[itr].split(" ").join("+"));
+        redirect = `https://www.google.com/search?q=${link[itr]}&rlz=1C1CHBF_enIN924IN924&oq=how+are+you&aqs=chrome..69i57j0l9.3482j0j7&sourceid=chrome&ie=UTF-8`;
+        document.getElementById("src").setAttribute("href",redirect);
         itr++;
         if(itr == noq){
             next.disabled = true;
@@ -59,9 +70,10 @@ fetch(url).then((response)=>{
         document.getElementById("q1_2").checked = false;
         document.getElementById("q1_3").checked = false;
         document.getElementById("q1_4").checked = false;
+        document.getElementById("src").style.visibility = "hidden";
     });
     submit.addEventListener("click",()=>{
-        console.log("hii");
+        // console.log("hii");
         let arr = [];
         let index;
         for(let i = 0;i < 4;i++){
@@ -94,6 +106,7 @@ fetch(url).then((response)=>{
             document.getElementById("option3").style.border = "3px solid red";
             document.getElementById("option4").style.border = "3px solid green";
         }
+        document.getElementById("src").style.visibility = "visible";
     })
     let sp = document.getElementById("option1");
     sp.addEventListener("click",()=>{
@@ -112,4 +125,3 @@ fetch(url).then((response)=>{
         document.getElementById("q1_4").checked = true;
     })
 })
-

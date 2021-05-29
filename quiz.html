@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QUiz</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .option {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,26 +18,26 @@
     <div class="question">
         <p id="q1">This is Question 1</p>
         <span class="option">
-            <input type="radio" name="Q1" id="q1_1" class="radio_btn">
-            Option 1
+            <input type="radio" name="Q1" id="q1_1">
+            <label for="Q1" id = "Q1_1">Option1</label>
         </span>
         <span class="option">
-            <input type="radio" name="Q1" id="q1_2" class="radio_btn">
-            Option 2
+            <input type="radio" name="Q1" id="q1_2">
+            <label for="Q1" id = "Q1_2">Option2</label>
         </span>
         <span class="option">
-            <input type="radio" name="Q1" id="q1_3" class="radio_btn">
-            Option 3
+            <input type="radio" name="Q1" id="q1_3">
+            <label for="Q1" id = "Q1_3">Option3</label>
         </span>
         <span class="option">
-            <input type="radio" name="Q1" id="q1_4" class="radio_btn">
-            Option 4
+            <input type="radio" name="Q1" id="q1_4">
+            <label for="Q1" id = "Q1_4">Option4</label>
         </span>
         <span>
-            <button type="submit">Confirm</button>
+            <button type="submit" id = "next">Next</button>
         </span>
         <span>
-            <button type="submit">Next</button>
+            <button type="submit" id = "submit">Confirm</button>
         </span>
     </div>
 

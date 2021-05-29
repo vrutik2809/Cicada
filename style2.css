@@ -62,6 +62,7 @@ body{
     font-size: 1rem;
 }
 .btn:hover{
+    transition: all 0.2s ease-in;
     background-color: rgba(85, 81, 81,0);
     /* background-color: none; */
     color: white;
@@ -69,6 +70,7 @@ body{
     border:2px solid white;
 }
 .btn a:hover{
+    transition: all 0.2s ease-in;
     color:white;
     /* cursor: pointer; */
 }
@@ -124,4 +126,10 @@ body{
 .option{
     cursor:pointer;
 }
+.option:hover{
+    transition: all 0.2s ease-in;
+    background-color:rgba(70, 66, 66,0.6);
+    
+}
+
 

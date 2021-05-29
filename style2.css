@@ -121,4 +121,7 @@ body{
 .icon{
     color: #8e44ad;
 }
+.option{
+    cursor:pointer;
+}
 

@@ -71,28 +71,28 @@ fetch(url).then((response)=>{
             }
         }
         if(index === 0){
-            document.getElementById("Q1_1").style.border = "3px solid green";
-            document.getElementById("Q1_2").style.border = "3px solid red";
-            document.getElementById("Q1_3").style.border = "3px solid red";
-            document.getElementById("Q1_4").style.border = "3px solid red";
+            document.getElementById("option1").style.border = "3px solid green";
+            document.getElementById("option2").style.border = "3px solid red";
+            document.getElementById("option3").style.border = "3px solid red";
+            document.getElementById("option4").style.border = "3px solid red";
         }
         else if(index === 1){
-            document.getElementById("Q1_1").style.border = "3px solid red";
-            document.getElementById("Q1_2").style.border = "3px solid green";
-            document.getElementById("Q1_3").style.border = "3px solid red";
-            document.getElementById("Q1_4").style.border = "3px solid red";
+            document.getElementById("option1").style.border = "3px solid red";
+            document.getElementById("option2").style.border = "3px solid green";
+            document.getElementById("option3").style.border = "3px solid red";
+            document.getElementById("option4").style.border = "3px solid red";
         }
         else if(index === 2){
-            document.getElementById("Q1_1").style.border = "3px solid red";
-            document.getElementById("Q1_2").style.border = "3px solid red";
-            document.getElementById("Q1_3").style.border = "3px solid green";
-            document.getElementById("Q1_4").style.border = "3px solid red";
+            document.getElementById("option1").style.border = "3px solid red";
+            document.getElementById("option2").style.border = "3px solid red";
+            document.getElementById("option3").style.border = "3px solid green";
+            document.getElementById("option4").style.border = "3px solid red";
         }
         else{
-            document.getElementById("Q1_1").style.border = "3px solid red";
-            document.getElementById("Q1_2").style.border = "3px solid red";
-            document.getElementById("Q1_3").style.border = "3px solid red";
-            document.getElementById("Q1_4").style.border = "3px solid green";
+            document.getElementById("option1").style.border = "3px solid red";
+            document.getElementById("option2").style.border = "3px solid red";
+            document.getElementById("option3").style.border = "3px solid red";
+            document.getElementById("option4").style.border = "3px solid green";
         }
     }) 
 })

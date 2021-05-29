@@ -94,5 +94,22 @@ fetch(url).then((response)=>{
             document.getElementById("option3").style.border = "3px solid red";
             document.getElementById("option4").style.border = "3px solid green";
         }
-    }) 
+    })
+    let sp = document.getElementById("option1");
+    sp.addEventListener("click",()=>{
+        document.getElementById("q1_1").checked = true;
+    })
+    sp = document.getElementById("option2");
+    sp.addEventListener("click",()=>{
+        document.getElementById("q1_2").checked = true;
+    })
+    sp = document.getElementById("option3");
+    sp.addEventListener("click",()=>{
+        document.getElementById("q1_3").checked = true;
+    })
+    sp = document.getElementById("option4");
+    sp.addEventListener("click",()=>{
+        document.getElementById("q1_4").checked = true;
+    })
 })
+

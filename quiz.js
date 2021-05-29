@@ -1,4 +1,4 @@
-document.getElementById("paudio").setAttribute("src","background.mp3");
+document.getElementById("paudio").setAttribute("src","back.mp3");
 document.getElementById("paudio").volume = 0.2;
 let cat;
 if(localStorage.getItem("Catagory") == "Sports"){
@@ -45,8 +45,8 @@ fetch(url).then((response)=>{
     document.getElementById("Q1_2").innerHTML = options[itr][1];
     document.getElementById("Q1_3").innerHTML = options[itr][2];
     document.getElementById("Q1_4").innerHTML = options[itr][3];
-    link.push(questions[itr].split(" ").join("+"));
-    // console.log(link);
+    link.push(encodeURIComponent(questions[itr]));
+    console.log(link);
     redirect = `https://www.google.com/search?q=${link[itr]}&rlz=1C1CHBF_enIN924IN924&oq=how+are+you&aqs=chrome..69i57j0l9.3482j0j7&sourceid=chrome&ie=UTF-8`;
     // console.log(redirect);
     document.getElementById("src").setAttribute("href",redirect);
@@ -61,7 +61,7 @@ fetch(url).then((response)=>{
         document.getElementById("Q1_2").innerHTML = options[itr][1];
         document.getElementById("Q1_3").innerHTML = options[itr][2];
         document.getElementById("Q1_4").innerHTML = options[itr][3];
-        link.push(questions[itr].split(" ").join("+"));
+        link.push(encodeURIComponent(questions[itr]));
         redirect = `https://www.google.com/search?q=${link[itr]}&rlz=1C1CHBF_enIN924IN924&oq=how+are+you&aqs=chrome..69i57j0l9.3482j0j7&sourceid=chrome&ie=UTF-8`;
         document.getElementById("src").setAttribute("href",redirect);
         itr++;
@@ -151,4 +151,5 @@ fetch(url).then((response)=>{
         document.getElementById("q1_4").checked = true;
     })
 })
+
 

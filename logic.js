@@ -1,6 +1,6 @@
 //selector
-console.log("Hello");
-document.getElementById("baudio").setAttribute("src","background1.mp3");
+console.log("Hii");
+document.getElementById("baudio").setAttribute("src","song.mp3");
 document.getElementById("baudio").volume = 0.7;
 var number = document.getElementById("numberofquestions");
 var cat = document.getElementById("category");

@@ -1,3 +1,5 @@
+document.getElementById("paudio").setAttribute("src","back.mp3");
+document.getElementById("paudio").volume = 0.2;
 let cat;
 if(localStorage.getItem("Catagory") == "Sports"){
     cat = 21;
@@ -87,24 +89,48 @@ fetch(url).then((response)=>{
             document.getElementById("option2").style.border = "3px solid red";
             document.getElementById("option3").style.border = "3px solid red";
             document.getElementById("option4").style.border = "3px solid red";
+            if(!document.getElementById("q1_1").checked){
+                document.getElementById("audio").setAttribute("src","wrong.wav");
+            }
+            else{
+                document.getElementById("audio").setAttribute("src","pos.mp3");
+            }
         }
         else if(index === 1){
             document.getElementById("option1").style.border = "3px solid red";
             document.getElementById("option2").style.border = "3px solid green";
             document.getElementById("option3").style.border = "3px solid red";
             document.getElementById("option4").style.border = "3px solid red";
+            if(!document.getElementById("q1_2").checked){
+                document.getElementById("audio").setAttribute("src","wrong.wav");
+            }
+            else{
+                document.getElementById("audio").setAttribute("src","pos.mp3");
+            }
         }
         else if(index === 2){
             document.getElementById("option1").style.border = "3px solid red";
             document.getElementById("option2").style.border = "3px solid red";
             document.getElementById("option3").style.border = "3px solid green";
             document.getElementById("option4").style.border = "3px solid red";
+            if(!document.getElementById("q1_3").checked){
+                document.getElementById("audio").setAttribute("src","wrong.wav");
+            }
+            else{
+                document.getElementById("audio").setAttribute("src","pos.mp3");
+            }
         }
         else{
             document.getElementById("option1").style.border = "3px solid red";
             document.getElementById("option2").style.border = "3px solid red";
             document.getElementById("option3").style.border = "3px solid red";
             document.getElementById("option4").style.border = "3px solid green";
+            if(!document.getElementById("q1_4").checked){
+                document.getElementById("audio").setAttribute("src","wrong.wav");
+            }
+            else{
+                document.getElementById("audio").setAttribute("src","pos.mp3");
+            }
         }
         document.getElementById("src").style.visibility = "visible";
     })
@@ -125,3 +151,4 @@ fetch(url).then((response)=>{
         document.getElementById("q1_4").checked = true;
     })
 })
+

@@ -1,6 +1,6 @@
 //selector
 document.getElementById("paudio").setAttribute("src","background.mp3");
-document.getElementById("paudio").volume = 0.2;
+document.getElementById("paudio").volume = 0.6;
 console.log("ayush khamar");
 var number = document.getElementById("numberofquestions");
 var cat = document.getElementById("category");

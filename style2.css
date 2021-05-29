@@ -11,6 +11,9 @@ body{
     height:100vh; */
     font-family: 'Ubuntu', sans-serif;
     background: url('back2.jpg');
+
+
+    
     background-size: 1296px  864px;
     
 }
@@ -104,6 +107,3 @@ body{
     margin: 10px;
 
 }
-
-
-

@@ -1,7 +1,7 @@
 //selector
 document.getElementById("baudio").setAttribute("src","background1.mp3");
 document.getElementById("baudio").volume = 0.7;
-console.log("Cicada");
+console.log("Cicadaa");
 var number = document.getElementById("numberofquestions");
 var cat = document.getElementById("category");
 var level = document.getElementById("difficulty");

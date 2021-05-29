@@ -17,7 +17,7 @@ btn.addEventListener("click",()=>{
     else
     {
     
-
+     document.getElementById('temp').setAttribute('href','quiz.html');
     localStorage.setItem("NumberOfQuestions",noq);
     localStorage.setItem("Catagory",ctg);
     localStorage.setItem("Level",lvl);

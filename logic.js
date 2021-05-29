@@ -9,7 +9,7 @@ btn.addEventListener("click",()=>{
     let noq = parseInt(number.value);
     let ctg = cat.value;
     let lvl = level.value;
-    if(noq=="undefined"||ctg=="undefined"||lvl=="undefined")
+    if(noq==undefined||ctg==undefined||lvl==undefined)
     {
         alert('Please select Data');
         document.getElementById('temp').setAttribute('href','#');
